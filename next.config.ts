@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/obito-bwa", // Replace with your GitHub repo name
-  assetPrefix: "/obito-bwa/",
+  basePath: process.env.NODE_ENV === "production" ? "/obito-bwa" : "", // Replace with your GitHub repo name
+  assetPrefix: process.env.NODE_ENV === "production" ? "/obito-bwa/" : "",
 };
 
 export default nextConfig;
